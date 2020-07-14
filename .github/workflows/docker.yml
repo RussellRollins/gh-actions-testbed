@@ -11,6 +11,6 @@ jobs:
     steps:
       - run: |
           echo "This is a job inside a container."
-          echo "The relevant event is located at: ${GITHUB_EVENT_PATH}"
+          echo "The ${GITHUB_EVENT_NAME} event is located at: ${GITHUB_EVENT_PATH}"
           cat "$GITHUB_EVENT_PATH"
         name: Inspect GITHUB_EVENT_PATH
