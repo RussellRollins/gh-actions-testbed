@@ -2,7 +2,8 @@
 name: Inspect GITHUB_EVENT_PATH
     
 on:
-  push
+  pull_request
+
     
 jobs:
   container:
