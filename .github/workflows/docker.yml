@@ -1,0 +1,16 @@
+---
+name: Inspect GITHUB_EVENT_PATH
+    
+on:
+  push
+    
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    container: alpine:3.12.0
+    steps:
+      - run: |
+          echo "This is a job inside a container."
+          echo "The relevant event is located at: ${GITHUB_EVENT_PATH}"
+          cat "$GITHUB_EVENT_PATH"
+        name: Inspect GITHUB_EVENT_PATH
