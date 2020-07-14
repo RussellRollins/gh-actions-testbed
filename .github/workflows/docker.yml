@@ -2,7 +2,9 @@
 name: Inspect GITHUB_EVENT_PATH
     
 on:
-  pull_request
+  pull_request:
+    types:
+      - closed
 
     
 jobs:
